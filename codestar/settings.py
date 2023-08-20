@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mytodolist.herokuapp.com','8000-rubemjanoni-project-pp4-cjq8lpa6on.us2.codeanyapp.com',
-'https://mytodolist-b19dd36961bb.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-cjq8lpa6on.us2.codeanyapp.com',
+                 'mytodolist-b19dd36961bb.herokuapp.com']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',    
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'blog',
@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
