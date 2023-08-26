@@ -21,28 +21,42 @@ def signup(request):
         })
 
     else:
-        if request.POST['password1'] == request.POST['password2']:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            if request.POST['password1'] == request.POST['password2']:
 
-            try:
-                user = User.objects.create_user(
-                    username=request.POST['username'], password=request.POST['password1'])
-                user.save()
+                try:
+                    user = User.objects.create_user(
+                        username=request.POST['username'], password=request.POST['password1'])
+                    user.save()
 
-                login(request, user)
-                return redirect('tasks')
+                    login(request, user)
+                    return redirect('tasks')
 
-            except:
+                except:
+
+                    return render(request, 'signup.html', {
+
+                        'form': form,
+                        'error': 'User already exists'
+
+                    })
+            else:
 
                 return render(request, 'signup.html', {
 
-                    'form': UserCreationForm,
-                    "error": 'User already exist'
+                    'form': form,
+                    'error': 'Password do not match'
 
                 })
 
-        return render(request, 'signup.html', {
+        else:
+            return render(request, 'signup.html', {
 
-            'form': UserCreationForm,
-            "error": 'Password different'
+                'form': form,
 
-        })
+            })
+
+
+def login(request):
+    return render(request, 'login.html')
