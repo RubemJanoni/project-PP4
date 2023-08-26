@@ -1,0 +1,11 @@
+{% extends 'menu.html' %} {% block content %}
+<section class="container py-5">
+  <div class="row">
+    {% for post in posts %}
+    <div class="card me-4" style="width: 18rem">
+      <!-- ... Cartão de post ... -->
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
