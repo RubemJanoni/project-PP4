@@ -18,113 +18,81 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Coffee</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-dark"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Acesso</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{% url 'home' %}"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'signup' %}">Register</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign out</a>
-              </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </nav>
+    {% extends 'menu.html' %} {% load static %} {% block content %}
+    <div class="jumbotron mt-4 ml-3">
+      <h2>Welcome to Coffee Blog</h2>
+      <p>Explore the world of coffee and its fascinating flavors.</p>
+    </div>
 
-    <section class="container py-5">
+    <div class="container">
       <div class="row">
-        <div class="card me-4" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Coffee Arabica</h5>
-            <p class="card-text fs-6">
-              This variety emerged in the mountains of Ethiopia, Africa, and it
-              is no coincidence that one of the main recommendations for
-              planting this coffee is to consider the altitude of the place. The
-              higher it is grown, the better the grain quality. Usually, drinks
-              considered special are made with Arabica coffee which, despite
-              having a lower caffeine content, has a very particular complexity
-              of aromas.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="{% static 'images/coffee01.jpg'%}"
+              class="card-img-top w-60"
+              alt="coffee grain"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Coffee Arabica</h5>
+              <p class="card-text">
+                Learn about the origin and flavors of Arabica coffee.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
           </div>
         </div>
-        <div class="card me-4" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Coffee Bourbon</h5>
-            <p class="card-text fs-6">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="{% static 'images/coffee02.jpg'%}"
+              class="card-img-top w-60"
+              alt="coffee grain"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Coffee Arabica</h5>
+              <p class="card-text">
+                Learn about the origin and flavors of Arabica coffee.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
           </div>
         </div>
-        <div class="card me-4" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Coffee Robusta</h5>
-            <p class="card-text fs-6">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="{% static 'images/coffee03.jpg'%}"
+              class="card-img-top img-fluid"
+              alt="coffee grain"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Coffee Arabica</h5>
+              <p class="card-text">
+                Learn about the origin and flavors of Arabica coffee.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    {% block content %} {% endblock %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to receive the latest coffee insights and news.</p>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="email"
+              placeholder="Your Email"
+            />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
   </body>
 </html>
