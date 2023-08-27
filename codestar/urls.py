@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from task.views import home, signup
 from blog.views import post_list, post_details
 from django.contrib.auth import views as auth_views
@@ -27,5 +27,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('post_list/', post_list, name='post_list'),
     path('post_details/<int:post_id>', post_details, name='post_details'),
+    path('summernote/', include('django_summernote.urls')),
 
 ]
