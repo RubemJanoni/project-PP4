@@ -1,30 +1,16 @@
-"""codestar URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import PostList
-from django.contrib.auth import views as auth_views
+from Access_Control.views import *
+from Blog.views import *
 
+app_name = 'Access_Control'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),   
-    
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('post_list/', PostList.as_view(), name='post_list'),
-    # path('post_details/<int:post_id>', post_details, name='post_details'),
-    path('summernote/', include('django_summernote.urls')),
+    path('', Make_login.as_view(), name='Make_login'),
+    path('logout/', Logout.as_view(), name='Make_logout'),
+    path('users/', ListaUser.as_view(), name='List_user'),
+    path('create/', CreateUser.as_view(), name='Create_user'),
+    path('update/<int:pk>', UpdateUser.as_view(), name='Update_user'),
 
+    path('delete/<int:pk>', DeleteUser.as_view(), name='Delete_user'),
 ]
