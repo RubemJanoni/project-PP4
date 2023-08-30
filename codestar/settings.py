@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
     'task',
+    'Access_Control',
 ]
 
 MIDDLEWARE = [
