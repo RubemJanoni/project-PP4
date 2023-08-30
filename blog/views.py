@@ -24,8 +24,8 @@ class CreatePost(CreateView):
     # fields = '__all__'
     form_class = Publication_form
     excludes = ['likes']
-    template_name = 'blog/pages/painel.html'
-    success_url = reverse_lazy('Access_Control:List_publication')
+    template_name = 'pages/painel.html'
+    success_url = reverse_lazy('blog:List_publication')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
@@ -39,23 +39,22 @@ class CreatePost(CreateView):
 
 class ListaPost(ListView):
     model = Post
-    template_name = 'blog/pages/lista.html'
-    success_url = reverse_lazy('Access_Control:Make_login')
+    template_name = 'pages/lista.html'
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Todas as postagens"
         context['description_page'] = "Relação de todos as postagens no sistema"
-        context['main'] = "Postagem"
+        context['main'] = "Post"
         return context
 
 
 class UpdatePost(UpdateView):
     model = Post
     form_class = Publication_form
-    template_name = 'blog/pages/painel.html'
-    success_url = reverse_lazy('Access_Control:List_user')
+    template_name = 'pages/painel.html'
+    success_url = reverse_lazy('blog: List_publication')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
@@ -68,8 +67,8 @@ class UpdatePost(UpdateView):
 
 class DeletePost(DeleteView):
     model = Post
-    template_name = 'blog/pages/painel.html'
-    success_url = reverse_lazy('Access_Control:List_user')
+    template_name = 'pages/painel.html'
+    success_url = reverse_lazy('blog:List_publication')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):

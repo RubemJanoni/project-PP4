@@ -1,15 +1,15 @@
-{% extends 'Blog/base/base.html' %}
+{% extends 'base/base.html' %}
 
 {% block css %}
 /* static/css/styles.css */
-
+<style>
 .form-container {
-width: 100% !important;
 max-width: 800px !important;
 margin: auto !important;
 padding: 2rem !important;
 background-color: #f4f4f4 !important;
 border-radius: 10px !important;
+background: #007bff;
 
 }
 .bg-secondary{
@@ -51,7 +51,7 @@ border-radius: 4px !important;
 cursor: pointer !important;
 }
 
-
+</style>
 
 {% endblock css %}
 
@@ -65,7 +65,7 @@ cursor: pointer !important;
 {% block container %}
 
 
-<form method="POST" , enctype="multipart/form-data" class='form-container w-75 shadow shadow-sm p-2 '>
+<form method="POST" , enctype="multipart/form-data"  class='form-container w-75  shadow shadow-sm p-2 class-form m-auto'>
     {% csrf_token %}
     {{ form.as_p }}
     {{ form.media}}

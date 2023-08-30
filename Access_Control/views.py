@@ -10,17 +10,17 @@ from django.contrib.auth.models import User
 # Create your views here.
 class Make_login (LoginView):
     template_name = 'login.html'
-    success_url = reverse_lazy('Blog:Initial')
+    success_url = reverse_lazy('blog:List_publication')
 
 
-class Logout (LogoutView):
-    next_page = reverse_lazy('Access_Control:Make_login')
+class Logout (LoginRequiredMixin, LogoutView):
+    success_url = reverse_lazy('Access_Control:Make_login')
 
 
 class CreateUser(CreateView):
     model = User
     form_class = UserCreationForm
-    template_name = 'Blog/pages/painel.html'
+    template_name = 'pages/painel.html'
     success_url = reverse_lazy('Access_Control:Make_login')
 
     # Método que envia informações complementares para o template
@@ -37,7 +37,7 @@ class CreateUser(CreateView):
 class UpdateUser(UpdateView):
     model = User
     form_class = UserCreationForm
-    template_name = 'Blog/pages/painel.html'
+    template_name = 'pages/painel.html'
     success_url = reverse_lazy('Access_Control:List_user')
 
     # Método que envia informações complementares para o template
@@ -52,7 +52,7 @@ class UpdateUser(UpdateView):
 
 class DeleteUser(DeleteView):
     model = User
-    template_name = 'Blog/pages/painel.html'
+    template_name = 'pages/painel.html'
     success_url = reverse_lazy('Access_Control:List_user')
 
     # Método que envia informações complementares para o template
@@ -66,7 +66,7 @@ class DeleteUser(DeleteView):
 
 class ListaUser(ListView):
     model = User
-    template_name = 'Blog/pages/lista.html'
+    template_name = 'pages/lista.html'
     success_url = reverse_lazy('Access_Control:Make_login')
 
     # Método que envia informações complementares para o template

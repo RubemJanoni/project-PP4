@@ -1,4 +1,4 @@
-{% extends 'Blog/base/base.html' %}
+{% extends 'base/base.html' %}
 
 <h2>Welcome to Coffee Blog</h2>
 <p>Explore the world of coffee and its fascinating flavors.</p>
@@ -7,61 +7,35 @@
 {% block container %}
 {% load static %}
 <div class="container">
+    
     <div class="row">
-
-        {{publica}}
-
-        <div class="col-md-4">
+       <!-- {{publica}}-->
+        {% for n in publica %}      
+        <div class="col-md-4 mt-2 mb-2">
             <div class="card">
-                <img src="{% static 'coffee01.jpg'%}" class="card-img-top w-60" alt="coffee grain" />
+                {% if n.featured_image  %}                                 
+                    <img height='300' src=" {{n.featured_image.url }}" class="card-img-top w-60" alt="coffee grain" />
+                {% else %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top w-60" alt="coffee grain" />
+                {% endif %}
+
                 <div class="card-body">
-                    <h5 class="card-title">Coffee Arabica</h5>
+                    <h5 class="card-title">{{n.title}}</h5>
                     <p class="card-text">
-                        Learn about the origin and flavors of Arabica coffee.
+                        {{n.content}}
                     </p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <!-- <a href="#" class="btn btn-primary">Read More</a>-->
                 </div>
             </div>
         </div>
-
-
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="{% static 'coffee02.jpg'%}" class="card-img-top w-60" alt="coffee grain" />
-                <div class="card-body">
-                    <h5 class="card-title">Coffee Arabica</h5>
-                    <p class="card-text">
-                        Learn about the origin and flavors of Arabica coffee.
-                    </p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="{% static 'coffee03.jpg'%}" class="card-img-top img-fluid" alt="coffee grain" />
-                <div class="card-body">
-                    <h5 class="card-title">Coffee Arabica</h5>
-                    <p class="card-text">
-                        Learn about the origin and flavors of Arabica coffee.
-                    </p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
-        </div>
+         {% endfor %}
     </div>
-</div>
+   
+   
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3 text-center">
-            <h3>Stay Updated</h3>
-            <p>Subscribe to receive the latest coffee insights and news.</p>
-            <form class="d-flex">
-                <input class="form-control me-2" type="email" placeholder="Your Email" />
-                <button class="btn btn-primary" type="submit">Subscribe</button>
-            </form>
-        </div>
-    </div>
+     
+
+
+
+        
     {% endblock container %}

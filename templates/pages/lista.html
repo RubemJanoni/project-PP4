@@ -1,7 +1,7 @@
-{% extends 'Blog/base/base.html' %}
+{% extends 'base/base.html' %}
 
 {% block css %}
-/* static/css/styles.css */
+<style>
 
 .form-container {
 width: 100% !important;
@@ -50,7 +50,7 @@ border: none !important;
 border-radius: 4px !important;
 cursor: pointer !important;
 }
-
+</style>
 
 
 {% endblock css %}
@@ -63,11 +63,11 @@ cursor: pointer !important;
 {% endblock page_title_content %}
 {% block container %}
 
-<div class='form-container w-75 shadow shadow-sm p-2 '>
-    {% if not main == 'Postagem' %}
+<div class='form-container w-75 shadow shadow-sm p-2 m-auto border '>
+    {% if not main == 'Post' %}
     <table class="table table-responsive">
-        <thead>
-            <tr>
+        <thead >
+            <tr >
                 <th>Username</th>
                 <th>Action</th>
 
@@ -85,9 +85,9 @@ cursor: pointer !important;
         </tbody>
     </table>
     {% else %}
-    <table class="table table-responsive">
-        <thead>
-            <tr>
+    <table class="table table-responsive ">
+        <thead >
+            <tr class="bg-info">
                 <th>Postagem</th>
                 <th>Data de criação</th>
                 <th>Ação</th>
@@ -98,8 +98,8 @@ cursor: pointer !important;
             <tr>
                 <td>{{n.title}}</td>
                 <td>{{n.created_on}}</td>
-                <td><a href="{% url 'Blog:Update_publication' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a> |
-                    <a class='btn btn-sm btn-danger m1-1' href="{% url 'Blog:Delete_publication' n.id %}"> Delete</a>
+                <td><a href="{% url 'blog:Update_publication' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a> |
+                    <a class='btn btn-sm btn-danger m1-1' href="{% url 'blog:Delete_publication' n.id %}"> Delete</a>
                 </td>
             </tr>
             {% endfor %}

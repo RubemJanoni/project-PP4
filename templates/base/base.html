@@ -45,7 +45,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'Blog:Home' %}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'blog:Home' %}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'Access_Control:Create_user' %}">Register</a>
@@ -81,10 +81,10 @@
         {% if user.is_authenticated %}
         <div class="m-auto w-75  p-1 ml-auto mr-auto mt-2 mb-5 shadow shadow-sm">
             <div class="h5 border-bottom ">Menu de controle</div>
-            <a class=" btn border btn-secondary mr-1 " href="{% url 'Blog:Home' %}" class='btn btn-sm'>Home</a>
-            <a class=" btn border btn-secondary mr-1 " href="{% url 'Blog:List_publication' %}" class='btn btn-sm'>All
+            <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:Home' %}" class='btn btn-sm'>Home</a>
+            <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:List_publication' %}" class='btn btn-sm'>All
                 Publications</a>
-            <a class="btn border btn-secondary mr-1 " href="{% url 'Blog:Create_publication' %}"
+            <a class="btn border btn-secondary mr-1 " href="{% url 'blog:Create_publication' %}"
                 class='btn btn-sm'>Create Publication</a>
         </div>
         {% endif %}
