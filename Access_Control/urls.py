@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from Access_Control.views import *
-from Blog.views import *
+from blog.views import *
 
 app_name = 'Access_Control'
 

@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 class Make_login (LoginView):
-    template_name = 'Acess_Control/login.html'
+    template_name = 'login.html'
     success_url = reverse_lazy('Blog:Initial')
 
 

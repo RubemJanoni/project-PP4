@@ -1,0 +1,67 @@
+{% extends 'Blog/base/base.html' %}
+
+<h2>Welcome to Coffee Blog</h2>
+<p>Explore the world of coffee and its fascinating flavors.</p>
+</div>
+
+{% block container %}
+{% load static %}
+<div class="container">
+    <div class="row">
+
+        {{publica}}
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'coffee01.jpg'%}" class="card-img-top w-60" alt="coffee grain" />
+                <div class="card-body">
+                    <h5 class="card-title">Coffee Arabica</h5>
+                    <p class="card-text">
+                        Learn about the origin and flavors of Arabica coffee.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'coffee02.jpg'%}" class="card-img-top w-60" alt="coffee grain" />
+                <div class="card-body">
+                    <h5 class="card-title">Coffee Arabica</h5>
+                    <p class="card-text">
+                        Learn about the origin and flavors of Arabica coffee.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'coffee03.jpg'%}" class="card-img-top img-fluid" alt="coffee grain" />
+                <div class="card-body">
+                    <h5 class="card-title">Coffee Arabica</h5>
+                    <p class="card-text">
+                        Learn about the origin and flavors of Arabica coffee.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to receive the latest coffee insights and news.</p>
+            <form class="d-flex">
+                <input class="form-control me-2" type="email" placeholder="Your Email" />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    {% endblock container %}

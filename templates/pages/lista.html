@@ -1,0 +1,112 @@
+{% extends 'Blog/base/base.html' %}
+
+{% block css %}
+/* static/css/styles.css */
+
+.form-container {
+width: 100% !important;
+max-width: 800px !important;
+margin: auto !important;
+padding: 2rem !important;
+background-color: #f4f4f4 !important;
+border-radius: 10px !important;
+
+}
+.bg-secondary{
+background-color: #f4f4f4 !important;
+}
+
+.form-container form {
+display: grid !important;
+
+}
+
+.form-container form label {
+font-weight: bold !important;
+}
+
+.form-container form input,
+.form-container form button {
+width: 100% !important;
+padding: 0.5rem !important;
+border: 1px solid #ccc !important;
+border-radius: 4px !important;
+}
+
+.form-container form input[type="password"] {
+font-family: inherit !important;
+}
+
+.form-container form .help-text {
+font-size: 0.8rem !important;
+color: #888 !important;
+}
+
+.form-container form button {
+padding: 0.5rem 1rem !important;
+background-color: #007bff !important;
+color: white !important;
+border: none !important;
+border-radius: 4px !important;
+cursor: pointer !important;
+}
+
+
+
+{% endblock css %}
+
+{% block page_title_content %}
+<div class="m-auto w-75 bg-secondary p-1 ml-auto mr-auto mt-2 mb-2">
+    <h2>{{title_page}}</h2>
+</div>
+<div class="m-auto w-75 p-1 ml-auto mr-auto mt-2 mb-2">{{description_page}}</div>
+{% endblock page_title_content %}
+{% block container %}
+
+<div class='form-container w-75 shadow shadow-sm p-2 '>
+    {% if not main == 'Postagem' %}
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for n in object_list %}
+            <tr>
+                <td>{{n.username}}</td>
+                <td><a href="{% url 'Access_Control:Update_user' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a>
+                    | <a class='btn btn-sm btn-danger m1-1' href="{% url 'Access_Control:Delete_user' n.id %}">
+                        Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>Postagem</th>
+                <th>Data de criação</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for n in object_list %}
+            <tr>
+                <td>{{n.title}}</td>
+                <td>{{n.created_on}}</td>
+                <td><a href="{% url 'Blog:Update_publication' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a> |
+                    <a class='btn btn-sm btn-danger m1-1' href="{% url 'Blog:Delete_publication' n.id %}"> Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+
+
+{% endblock container %}
