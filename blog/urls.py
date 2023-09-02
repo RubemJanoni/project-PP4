@@ -7,7 +7,8 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', Initial_page.as_view(), name='Home'),
-    path('publication/criar/', CreatePost.as_view(), name='Create_publication'),
+    path('publication/criar/', CreatePost.as_view(),
+     name='Create_publication'),
     path('publication/listar/', ListaPost.as_view(), name='List_publication'),
     path('publication/update/<int:pk>',
          UpdatePost.as_view(), name='Update_publication'),

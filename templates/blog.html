@@ -1,12 +1,14 @@
 {% extends 'base/base.html' %}
 
-<h2>Welcome to Coffee Blog</h2>
-<p>Explore the world of coffee and its fascinating flavors.</p>
-</div>
+
 
 {% block container %}
 {% load static %}
 <div class="container">
+    <div>
+        <h3>Welcome to Coffee Blog</h3>
+        <p>Explore the world of coffee and its fascinating flavors.</p>
+    </div>   
     
     <div class="row">
        <!-- {{publica}}-->
@@ -14,17 +16,16 @@
         <div class="col-md-4 mt-2 mb-2">
             <div class="card">
                 {% if n.featured_image  %}                                 
-                    <img height='300' src=" {{n.featured_image.url }}" class="card-img-top w-60" alt="coffee grain" />
+                    <img height='250' src=" {{n.featured_image.url }}" class="card-img-top w-60" alt="coffee grain" />
                 {% else %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top w-60" alt="coffee grain" />
+                    <img src="{% static 'images/coffee04.jpg' %}" class="card-img-top w-60" alt="coffee grain" />
                 {% endif %}
 
                 <div class="card-body">
                     <h5 class="card-title">{{n.title}}</h5>
                     <p class="card-text">
                         {{n.content}}
-                    </p>
-                    <!-- <a href="#" class="btn btn-primary">Read More</a>-->
+                    </p>                    
                 </div>
             </div>
         </div>

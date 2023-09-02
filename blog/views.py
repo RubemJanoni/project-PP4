@@ -30,9 +30,9 @@ class CreatePost(CreateView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Crie sua postagem"
-        context['description_page'] = "Use o formulário abaixo para criar novas postagens"
-        context['button_name'] = "Publicar Postagem"
+        context['title_page'] = "Create your post"
+        context['description_page'] = "Use the form below to create a post"
+        context['button_name'] = "Submit"
 
         return context
 
@@ -40,12 +40,13 @@ class CreatePost(CreateView):
 class ListaPost(ListView):
     model = Post
     template_name = 'pages/lista.html'
+    
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Todas as postagens"
-        context['description_page'] = "Relação de todos as postagens no sistema"
+        context['title_page'] = "All Posts"
+        context['description_page'] = "All Blog Posts"
         context['main'] = "Post"
         return context
 
@@ -54,14 +55,14 @@ class UpdatePost(UpdateView):
     model = Post
     form_class = Publication_form
     template_name = 'pages/painel.html'
-    success_url = reverse_lazy('blog: List_publication')
+    success_url = reverse_lazy('blog:List_publication')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Atualiza usuario"
-        context['description_page'] = "Use o formulário abaixo para atualizar a postagem"
-        context['button_name'] = "Atualizar postagem"
+        context['title_page'] = "Update User"
+        context['description_page'] = "Use the form below to update the post"
+        context['button_name'] = "Update Post"
         return context
 
 
@@ -73,7 +74,7 @@ class DeletePost(DeleteView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Exclui usuario"
-        context['description_page'] = "Use o formulário abaixo para excluir um usuário"
-        context['button_name'] = "Deletar publicação"
+        context['title_page'] = "Delete User"
+        context['description_page'] = "Use the form below to delete the post"
+        context['button_name'] = "Delete Post"
         return context

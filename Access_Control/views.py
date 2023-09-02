@@ -26,9 +26,9 @@ class CreateUser(CreateView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Registro de Usuários"
-        context['description_page'] = "Use o formulário abaixo para criar novos usuários"
-        context['button_name'] = "Criar novo usuario"
+        context['title_page'] = "Register User"
+        context['description_page'] = "Use the form below to create new users"
+        context['button_name'] = "Create new user"
         context['object_list'] = User.objects.all()
 
         return context
@@ -43,9 +43,9 @@ class UpdateUser(UpdateView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Atualiza usuario"
-        context['description_page'] = "Use o formulário abaixo para atualizar as informações de login do usuário"
-        context['button_name'] = "Criar novo usuario"
+        context['title_page'] = "Update User"
+        context['description_page'] = "Use the form below to update new users"
+        context['button_name'] = "Create new user"
         context['object_list'] = User.objects.all()
         return context
 
@@ -58,9 +58,9 @@ class DeleteUser(DeleteView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Exclui usuario"
-        context['description_page'] = "Use o formulário abaixo para excluir um usuário"
-        context['button_name'] = "Deletar usuario"
+        context['title_page'] = "Delete User"
+        context['description_page'] = "Use the form below to delete new users"
+        context['button_name'] = "Delete new user"
         return context
 
 
@@ -72,6 +72,6 @@ class ListaUser(ListView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Todos os usuarios"
-        context['description_page'] = "Relação de todos os usuarios cadastrados no sistema"
+        context['title_page'] = "Users"
+        context['description_page'] = "All users registered"
         return context

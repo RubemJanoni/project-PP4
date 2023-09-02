@@ -88,9 +88,9 @@ cursor: pointer !important;
     <table class="table table-responsive ">
         <thead >
             <tr class="bg-info">
-                <th>Postagem</th>
-                <th>Data de criação</th>
-                <th>Ação</th>
+                <th>Post</th>
+                <th>Creation Date</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -98,7 +98,7 @@ cursor: pointer !important;
             <tr>
                 <td>{{n.title}}</td>
                 <td>{{n.created_on}}</td>
-                <td><a href="{% url 'blog:Update_publication' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a> |
+                <td><a href="{% url 'blog:Update_publication' n.pk %}" class='btn btn-sm btn-info mr-1'> Update</a> |
                     <a class='btn btn-sm btn-danger m1-1' href="{% url 'blog:Delete_publication' n.id %}"> Delete</a>
                 </td>
             </tr>
