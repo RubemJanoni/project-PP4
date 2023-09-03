@@ -48,14 +48,11 @@ A nav-brand was used in the header, showing the name of the site "Coffee Blog" a
 ![menu-site](static/menu-coffeeblog.jpg)
 
 
-## The About Section
+## The Main Section
 
-The about section tells a little about the history, the meaning of Yoga, its benefits to health, body and mind.
-It also informs the user, the advantages and benefits after becoming a member of the club.
+In the body of the website, posts are inserted, built within a bootstrap card structure, with all the required responsiveness and planned according to the must-have requirements of the agile model.
 
-As background, a transparency was used, but allowing good legibility of the font, at the same time allowing the visualization of the background image.
-
-![about](https://user-images.githubusercontent.com/86210555/212206517-95c6b5bb-d990-40a6-9c67-6ce59bcd1e5d.jpg)
+![menu-site](static/menu-coffeeblog.jpg)
 
 
 
