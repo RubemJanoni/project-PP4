@@ -1,35 +1,58 @@
 # Coffee Blog
 
 Coffee blog is a website aimed at coffee lovers, a place where they can share information about the world of coffee.
+Users can create posts containing title, author, content and image, they can also update and delete their posts.
 
-![responsive-site2](https://user-images.githubusercontent.com/86210555/212193131-ca06ac90-a441-420e-a62d-fc3ae0af3059.png)
+![responsive-site](static/responsive-coffeeblog.jpg)
 
 ## Features
+
+- Design
+
+The design was planned to offer a clean, minimalist layout, with a white background and black navigation bar, highlighting the colors of the coffee images, the different shades of brown, harmoniously interacting with black and white.
+
 - Navigation
 
-Feature at the top of the page, the navigation shows the yoga club name in the left corner: Life Yoga Club that links to the index page.
-The other navigation links are to the right: Home, About, Gallery and Contact form.
+Navigation is quite simple, basically we have a menu on the left with the main features, containing three buttons (Home, All Posts, Create Post)
 
-The navigation links take the user to different sections in an easy and intuitive way.
+**Home** - It always takes you to the home page, where the posts are displayed.
+
+**All Posts** - Displays a list of posts, where it is possible to update or delete each post.
+
+**Create Post** - Through this button, the user has access to the post form, with basically the author, text and upload image fields.
+
+
+![menu-site](static/menu-coffeeblog.jpg)
+
+
+The **All post** and **Create Post** buttons take the user to the list of posts and the creation form respectively, as shown in the images below.
+
+
+![menu-site](static/post01-coffeeblog.jpg)
+
+![menu-site](static/post02-coffeeblog.jpg)
+
+
+
+  On the right we have a hamburger menu, where user login and registration features are presented.
+
+
+
+![menu-site](static/menu2-coffeeblog.jpg)
+
 
 ## The Header
 
-The header consists of the logo on the left and the navigation links on the right, whitesmoke white colors were used for the logo and navigation links, however when active, the link incorporates the color yellow (#e3c15c).
+A nav-brand was used in the header, showing the name of the site "Coffee Blog" and a logo, represented by a fontawosome icon.
 
-When hovering the mouse over the navigation links, a border appears in the background, highlighting the element and helping the user navigate.
-
-![menu01](https://user-images.githubusercontent.com/86210555/212197409-6baa5a9f-888c-4c07-902b-97eb3ce6c4c4.jpg)
+![menu-site](static/menu-coffeeblog.jpg)
 
 
+## The Main Section
 
-## The About Section
+In the body of the website, posts are inserted, built within a bootstrap card structure, with all the required responsiveness and planned according to the must-have requirements of the agile model.
 
-The about section tells a little about the history, the meaning of Yoga, its benefits to health, body and mind.
-It also informs the user, the advantages and benefits after becoming a member of the club.
-
-As background, a transparency was used, but allowing good legibility of the font, at the same time allowing the visualization of the background image.
-
-![about](https://user-images.githubusercontent.com/86210555/212206517-95c6b5bb-d990-40a6-9c67-6ce59bcd1e5d.jpg)
+![menu-site](static/menu-coffeeblog.jpg)
 
 
 
