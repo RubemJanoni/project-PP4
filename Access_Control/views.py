@@ -14,7 +14,7 @@ class Make_login (LoginView):
 
 
 class Logout (LoginRequiredMixin, LogoutView):
-    success_url = reverse_lazy('Access_Control:Make_login')
+    success_url = reverse_lazy('blog:List_publication')
 
 
 class CreateUser(CreateView):
