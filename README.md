@@ -78,33 +78,46 @@ Following the same design pattern, the footer is presented, containing links to 
 - CSS
   - No errors were found when passing through the official (Jigsaw) validator.
 
-    <p>
-        <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img style="border:0;width:88px;height:31px"
-                src="http://jigsaw.w3.org/css-validator/images/vcss"
-                alt="CSS válido!" />
-        </a>
-    </p>
+   
     
 - ACCESSIBILITY
-  - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.  
-         
-     
-    ![lighthouse-validation](https://user-images.githubusercontent.com/86210555/212221921-ecae458d-6a35-4201-b7f5-b2fa0f458778.jpg)
-    
-### Unfixed bugs
+  - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
 
-No unfixed bugs
+  ![validation-site](static/lighthouse-coffeeblog.jpg)         
+         
+    
+
 
 ## Deployment
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows:
-  - In the GitHub repository, navigate to the Settings tab.
-  - From the source section drop-down menu, select the Master Branch.
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+This epic is the deployment of the application to Heroku - application parameters and configuration of heroku
+USER-STORY: - As a developer, I must deploy to heroku to allow public access
+
+Deployment to Heroku
+Navigate to the heroku website and create an account if you dont have one.
+Create a new app
+Give it a name and select your region - create app
+Goto resources, and add Heroku postgres as an add-on, select the price plan that you desire
+Click on settings, and reveal config vars
+The following vars must be defined...
+
+
+DATABASE_URL should have been populated by heroku
+
+EMAIL_HOST_USER - is the sendng email address for user email verification (from signup).
+
+EMAIL_HOST_PASS - is the sendng email address password for user email verification (from signup).
+
+HEROKU_HOSTNAME - is the url which the app is deleivered by.
+
+SECRET_KEY - is a string that the django application needs to run.
+
+Go to the Deploy tab.
+Connect to GitHub, sign in and connect to the required repository.
+Scroll down to manual Deploy, select the main branch, and click deploy.
   
   
-The live link can be found here - [Life Yoga Club](https://rubemjanoni.github.io/code-project01/)
+The live link can be found here - [Coffee Blog](https://mytodolist-b19dd36961bb.herokuapp.com/)
 
 ## Credits
 
