@@ -34,7 +34,7 @@ The **All post** and **Create Post** buttons take the user to the list of posts 
 
 
 
-On the right we have a hamburger menu, where user login and registration features are presented.
+  On the right we have a hamburger menu, where user login and registration features are presented.
 
 
 
