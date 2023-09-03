@@ -98,8 +98,11 @@ Deployment to Heroku
 Navigate to the heroku website and create an account if you dont have one.
 
 Create a new app
+
 Give it a name and select your region
+
 Create app
+
 Go to resources, and add Heroku postgres as an add-on, select the price plan that you desire.
 
 Click on settings, and reveal config vars.
