@@ -3,7 +3,7 @@
 Coffee blog is a website aimed at coffee lovers, a place where they can share information about the world of coffee.
 Users can create posts containing title, author, content and image, they can also update and delete their posts.
 
-![responsive-site](static/responsive-coffeeblog)
+![responsive-site](static/responsive-coffeeblog.jpg)
 
 ## Features
 
