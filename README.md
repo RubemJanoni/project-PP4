@@ -1,16 +1,25 @@
 # Coffee Blog
 
 Coffee blog is a website aimed at coffee lovers, a place where they can share information about the world of coffee.
+Users can create posts containing title, author, content and image, they can also update and delete their posts.
 
 ![responsive-site2](https://user-images.githubusercontent.com/86210555/212193131-ca06ac90-a441-420e-a62d-fc3ae0af3059.png)
 
 ## Features
+
+- Design
+
+The design was planned to offer a clean, minimalist layout, with a white background and black navigation bar, highlighting the colors of the coffee images, the different shades of brown, harmoniously interacting with black and white.
+
 - Navigation
 
-Feature at the top of the page, the navigation shows the yoga club name in the left corner: Life Yoga Club that links to the index page.
-The other navigation links are to the right: Home, About, Gallery and Contact form.
+Navigation is quite simple, basically we have a menu on the left with the main features, containing three buttons (Home, All Posts, Create Post)
 
-The navigation links take the user to different sections in an easy and intuitive way.
+Home - It always takes you to the home page, where the posts are displayed.
+All Posts - Displays a list of posts, where it is possible to update or delete each post.
+Create Post - Through this button, the user has access to the post form, with basically the author, text and upload image fields.
+
+On the right we have a hamburger menu, where user login and registration features are presented.
 
 ## The Header
 
