@@ -91,10 +91,12 @@ Following the same design pattern, the footer is presented, containing links to 
 ## Deployment
 
 This epic is the deployment of the application to Heroku - application parameters and configuration of heroku
+
 USER-STORY: - As a developer, I must deploy to heroku to allow public access
 
 Deployment to Heroku
 Navigate to the heroku website and create an account if you dont have one.
+
 Create a new app
 Give it a name and select your region - create app
 Goto resources, and add Heroku postgres as an add-on, select the price plan that you desire
