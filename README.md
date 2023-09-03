@@ -57,36 +57,18 @@ In the body of the website, posts are inserted, built within a bootstrap card st
 
 
 
-## The Gallery Section
-
-The Gallery section presents two basic poses of Yoga, through two images, between the images a mini class was introduced, "Yoga poses for Beginners", presenting the main movements of Yoga. The video was embedded from Youtube, saving your storage space.
-
-![gallery02](https://user-images.githubusercontent.com/86210555/212209782-cde5f079-102b-4c8e-98aa-6170d49b94e5.jpg)
-
-## The Contact Form
-
-The contact section presents a form, consisting of 3 inputs, "Name:", "Email" and "Message" allowing the collection of user data, as well as contact with the user, in order to offer proximity to the user.
-
-
-![contact01](https://user-images.githubusercontent.com/86210555/212211515-8b787fae-11ca-4f45-9f26-b57b9ac2a94f.jpg)
-
 ## The Footer
 
-![footer01](https://user-images.githubusercontent.com/86210555/212212472-a1bb5edc-cac9-4ed2-94b5-f32f42f65471.jpg)
+Following the same design pattern, the footer is presented, containing links to the main social networks, with their respective fontawesome icons.
 
-
-The footer section includes links to the relevant social media sites for Life Yoga Club, changing color on hover.
-
-The links will open to a new tab to allow easy navigation for the user.
-
-The footer is valuable to the user as it encourages them to keep connected via social media
+![footer-site](static/footer-coffeeblog.jpg)
 
 ## Testing
 
 - I tested that this page works in different browsers: Chrome, Firefox, Safari.
 - I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
-- I confirmed that the navigation, header, about, gallery and contact text are all readable and easy to understand.
-- I have confirmed that the form works: requires entries in every field, will only accept an email in the email field and the submit button works.
+- I confirmed that the navigation, header, footer, forms are readable and easy to understand.
+- I have confirmed that the form works
 
 ## Validator Testing
 
@@ -105,15 +87,9 @@ The footer is valuable to the user as it encourages them to keep connected via s
     </p>
     
 - ACCESSIBILITY
-  - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
-  
-  
-
-
+  - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.  
          
      
-
-
     ![lighthouse-validation](https://user-images.githubusercontent.com/86210555/212221921-ecae458d-6a35-4201-b7f5-b2fa0f458778.jpg)
     
 ### Unfixed bugs
