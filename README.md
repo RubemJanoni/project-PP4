@@ -98,9 +98,12 @@ Deployment to Heroku
 Navigate to the heroku website and create an account if you dont have one.
 
 Create a new app
-Give it a name and select your region - create app
-Goto resources, and add Heroku postgres as an add-on, select the price plan that you desire
-Click on settings, and reveal config vars
+Give it a name and select your region
+Create app
+Go to resources, and add Heroku postgres as an add-on, select the price plan that you desire.
+
+Click on settings, and reveal config vars.
+
 The following vars must be defined...
 
 
@@ -115,7 +118,9 @@ HEROKU_HOSTNAME - is the url which the app is deleivered by.
 SECRET_KEY - is a string that the django application needs to run.
 
 Go to the Deploy tab.
+
 Connect to GitHub, sign in and connect to the required repository.
+
 Scroll down to manual Deploy, select the main branch, and click deploy.
   
   
