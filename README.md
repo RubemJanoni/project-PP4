@@ -35,6 +35,7 @@ The **All post** and **Create Post** buttons take the user to the list of posts 
 
 
   On the right we have a hamburger menu, where user login and registration features are presented.
+  The user will only be able to create, change and delete a post after registering and logging in.
 
 
 
