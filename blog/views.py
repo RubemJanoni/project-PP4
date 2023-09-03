@@ -40,16 +40,14 @@ class CreatePost(CreateView):
 class ListaPost(ListView):
     model = Post
     template_name = 'pages/lista.html'
-    
-
     # Método que envia informações complementares para o template
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "All Posts"
         context['description_page'] = "All Blog Posts"
         context['main'] = "Post"
         return context
-
 
 class UpdatePost(UpdateView):
     model = Post

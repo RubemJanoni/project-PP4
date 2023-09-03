@@ -73,11 +73,9 @@
     </nav>
 
 
-
-    <div class="jumbotron mt-4 ml-3 custom-jumbotron">
+    <div class="jumbotron mt-5 ml-3">
         {% if user.is_authenticated %}
-        <div class="m-auto w-75  p-1 ml-auto mr-auto mt-2 mb-5 shadow shadow-sm">
-            <div class="h5 border-bottom">Menu</div>
+        <div class="m-auto w-75  p-1 ml-auto mr-auto mt-4 mb-2 shadow shadow-sm">
             <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:Home' %}" class='btn btn-sm'>Home</a>
             <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:List_publication' %}" class='btn btn-sm'>All
                 Posts</a>
@@ -86,8 +84,10 @@
         </div>
         {% endif %}
 
-        {% block page_title_content %}{% endblock page_title_content %}
-        {% block container %}{% endblock container %}
+        {% block page_title_content %}
+        {% endblock page_title_content %}
+        {% block container %}
+        {% endblock container %}
 
 
     </div>
