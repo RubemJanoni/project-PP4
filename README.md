@@ -21,19 +21,25 @@ Navigation is quite simple, basically we have a menu on the left with the main f
 
 **Create Post** - Through this button, the user has access to the post form, with basically the author, text and upload image fields.
 
+
 ![menu-site](static/menu-coffeeblog.jpg)
 
+
 The **All post** and **Create Post** buttons take the user to the list of posts and the creation form respectively, as shown in the images below.
+
 
 ![menu-site](static/post01-coffeeblog.jpg)
 
 ![menu-site](static/post02-coffeeblog.jpg)
 
 
+
 On the right we have a hamburger menu, where user login and registration features are presented.
 
 
+
 ![menu-site](static/menu2-coffeeblog.jpg)
+
 
 ## The Header
 
