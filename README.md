@@ -3,7 +3,17 @@
 Coffee blog is a website aimed at coffee lovers, a place where they can share information about the world of coffee.
 Users can create posts containing title, author, content and image, they can also update and delete their posts.
 
+The live link can be found here - [Coffee Blog](https://mytodolist-b19dd36961bb.herokuapp.com/)
+
 ![responsive-site](static/responsive-coffeeblog.jpg)
+
+## Planning
+
+The project planning was done using the Agile methodology.
+
+![agile-site](static/agile-coffeeblog.jpg)
+
+
 
 ## Features
 
@@ -131,17 +141,14 @@ The live link can be found here - [Coffee Blog](https://mytodolist-b19dd36961bb.
 
 ## Credits
 
-### Content
-
-- The code to make the social media links was taken from the CI [Love Running](https://code-institute-org.github.io/love-running-2.0/index.html) project.
 
 ### Media
 
-- The background image was taken from [Pexels](https://www.pexels.com/pt-br/).
+- The images was taken from [Pexels](https://www.pexels.com/pt-br/).
 
-- The video in the gallery was taken from Youtube.
+- The icons was taken from fontawesome.
 
-- The audio in the Home was taken from [Bensound](https://www.bensound.com/)
+  
 
 
 
