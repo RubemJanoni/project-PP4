@@ -15,9 +15,9 @@ The design was planned to offer a clean, minimalist layout, with a white backgro
 
 Navigation is quite simple, basically we have a menu on the left with the main features, containing three buttons (Home, All Posts, Create Post)
 
-Home - It always takes you to the home page, where the posts are displayed.
-All Posts - Displays a list of posts, where it is possible to update or delete each post.
-Create Post - Through this button, the user has access to the post form, with basically the author, text and upload image fields.
+**Home** - It always takes you to the home page, where the posts are displayed.
+**All Posts** - Displays a list of posts, where it is possible to update or delete each post.
+**Create Post** - Through this button, the user has access to the post form, with basically the author, text and upload image fields.
 
 ![menu-site](static/menu-coffeeblog.jpg)
 
@@ -29,6 +29,7 @@ The **All post** and **Create Post** buttons take the user to the list of posts 
 
 
 On the right we have a hamburger menu, where user login and registration features are presented.
+
 
 ![menu-site](static/menu2-coffeeblog.jpg)
 
