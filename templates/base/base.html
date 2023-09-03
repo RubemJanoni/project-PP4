@@ -74,10 +74,10 @@
 
 
 
-    <div class="jumbotron mt-4 ml-3">
+    <div class="jumbotron mt-4 ml-3 custom-jumbotron">
         {% if user.is_authenticated %}
         <div class="m-auto w-75  p-1 ml-auto mr-auto mt-2 mb-5 shadow shadow-sm">
-            <div class="h5 border-bottom ">Menu</div>
+            <div class="h5 border-bottom">Menu</div>
             <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:Home' %}" class='btn btn-sm'>Home</a>
             <a class=" btn border btn-secondary mr-1 " href="{% url 'blog:List_publication' %}" class='btn btn-sm'>All
                 Posts</a>
