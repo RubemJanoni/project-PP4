@@ -34,7 +34,7 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = ['https://rubemjanoni-project-pp4-mci60lt0hg.us2.codeanyapp.com',
-                 'https://coffee-blog-e58e366c1103.herokuapp.com/']
+                 'https://coffee-blog-e58e366c1103.herokuapp.com']
 
 
 # Application definition
