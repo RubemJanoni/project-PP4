@@ -30,12 +30,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 
-ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-cjq8lpa6on.us2.codeanyapp.com',
-                 'mytodolist-b19dd36961bb.herokuapp.com']
+ALLOWED_HOSTS = ['https://rubemjanoni-project-pp4-mci60lt0hg.us2.codeanyapp.com',
+                 'https://coffee-blog-e58e366c1103.herokuapp.com/']
 
 
 # Application definition
