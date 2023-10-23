@@ -49,6 +49,7 @@ class ListaPost(ListView):
         context['main'] = "Post"
         return context
 
+
 class UpdatePost(UpdateView):
     model = Post
     form_class = Publication_form

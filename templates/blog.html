@@ -1,70 +1,68 @@
-{% extends 'base/base.html' %}
-
-
-
-{% block container %}
-{% load static %}
+{% extends 'base/base.html' %} {% block container %} {% load static %}
 <div class="container mt-2">
-    <div>
-        <h4>Welcome to Coffee Blog</h4>
-        <p>Explore the world of coffee and its fascinating flavors.</p>
-    </div>
-    
-    <div class="row">
-       <!-- {{publica}}-->
-        {% for n in publica %}      
-        <div class="col-md-4 mt-2 mb-5">
-            <div class="card">
-                {% if n.featured_image  %}                                 
-                    <img height='250' src=" {{n.featured_image.url }}" class="card-img-top w-60" alt="coffee grain" />
-                {% else %}
-                    <img src="{% static 'images/coffee04.jpg' %}" class="card-img-top w-60" alt="coffee grain" />
-                {% endif %}
+  <div>
+    <h4>Welcome to Coffee Blog</h4>
+    <p>Explore the world of coffee and its fascinating flavors.</p>
+  </div>
 
-                <div class="card-body">
-                    <h5 class="card-title">{{n.title}}</h5>
-                    <p class="card-text">
-                        {{n.content}}
-                    </p>                    
-                </div>
-            </div>
+  <div class="row">
+    <!-- {{publica}}-->
+    {% if not publica %}
+    <p class="mt-5 w-80 m-auto">
+      Seu banco de dados está vazio, por essa razão as imagens nao estão
+      aparecendo. Não esquecer de criar o super user. "python3 manage.py
+      createsuperuser"
+    </p>
+    {% endif%} {% for n in publica %}
+    <div class="col-md-4 mt-2 mb-5">
+      <div class="card">
+        {% if n.featured_image %}
+        <img
+          height="250"
+          src="{{n.featured_image.url }}"
+          class="card-img-top w-60"
+          alt="coffee grain"
+        />
+        {% else %}
+        <img
+          src="{% static 'images/coffee04.jpg' %}"
+          class="card-img-top w-60"
+          alt="coffee grain"
+        />
+        {% endif %}
+
+        <div class="card-body">
+          <h5 class="card-title">{{n.title}}</h5>
+          <p class="card-text">{{n.content}}</p>
         </div>
-         {% endfor %}
+      </div>
     </div>
+    {% endfor %}
+  </div>
 
-    <footer class="bg-dark text-light fixed-bottom">
-        <div class="container d-flex justify-content-center">
-            <div class="row d-flex justify-content-between align-items-center">
-                <div class="col-8 text-center">
-                    <p class="mt-0 mb-0">Follow Us</p>
-                </div>
-                <div class="col-8 text-center">
-                    <a href="#" class="text-light me-2" style="text-decoration: none;">
-                        <i class="fa-brands fa-facebook fa-sm" style="color: #fff;"></i>
-                    </a>
-                    <a href="#" class="text-light me-2" style="text-decoration: none;">
-                        <i class="fa-brands fa-twitter fa-sm" style="color: #fff;"></i>
-                    </a>
-                    <a href="#" class="text-light me-2" style="text-decoration: none;">
-                        <i class="fa-brands fa-instagram fa-sm" style="color: #fff;"></i>
-                    </a>
-                    <a href="#" class="text-light me-2" style="text-decoration: none;">
-                        <i class="fa-brands fa-linkedin fa-sm" style="color: #fff;"></i>
-                    </a>
-                </div>
-            </div>
+  <footer class="bg-dark text-light fixed-bottom">
+    <div class="container d-flex justify-content-center">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-8 text-center">
+          <p class="mt-0 mb-0">Follow Us</p>
         </div>
-    </footer>
+        <div class="col-8 text-center">
+          <a href="#" class="text-light me-2" style="text-decoration: none">
+            <i class="fa-brands fa-facebook fa-sm" style="color: #fff"></i>
+          </a>
+          <a href="#" class="text-light me-2" style="text-decoration: none">
+            <i class="fa-brands fa-twitter fa-sm" style="color: #fff"></i>
+          </a>
+          <a href="#" class="text-light me-2" style="text-decoration: none">
+            <i class="fa-brands fa-instagram fa-sm" style="color: #fff"></i>
+          </a>
+          <a href="#" class="text-light me-2" style="text-decoration: none">
+            <i class="fa-brands fa-linkedin fa-sm" style="color: #fff"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    
-
-
-   
-   
-
-     
-
-
-
-        
-    {% endblock container %}
+  {% endblock container %}
+</div>
