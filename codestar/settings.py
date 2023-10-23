@@ -28,11 +28,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-mci60lt0hg.us2.codeanyapp.com',
-                 'https://rubem-codestar2023-2e0bb09a4604.herokuapp.com']
+                 'https://coffee-blog-e58e366c1103.herokuapp.com/']
 
 
 # Application definition
