@@ -34,7 +34,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-mci60lt0hg.us2.codeanyapp.com',
-                 'codestar.herokuapp.com']
+                 'coffee-blog.herokuapp.com']
 
 
 # Application definition
