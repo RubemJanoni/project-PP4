@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from Access_Control.views import *
+from access_control.views import *
 from blog.views import *
 
-app_name = 'Access_Control'
+app_name = 'access_control'
 
 urlpatterns = [
     path('login/', Make_login.as_view(), name='Make_login'),

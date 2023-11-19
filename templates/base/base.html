@@ -45,19 +45,19 @@
                             <a class="nav-link active" aria-current="page" href="{% url 'blog:Home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'Access_Control:Create_user' %}">Register</a>
+                            <a class="nav-link" href="{% url 'access_control:Create_user' %}">Register</a>
                         </li>
                         {% if not user.is_authenticated %}
                         <li class="nav-item">
 
-                            <a class="nav-link" href="{% url 'Access_Control:Make_login' %}">Login</a>
+                            <a class="nav-link" href="{% url 'access_control:Make_login' %}">Login</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'Access_Control:List_user' %}">Users list</a>
+                            <a class="nav-link" href="{% url 'access_control:List_user' %}">Users list</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'Access_Control:Make_logout' %}">Sign out</a>
+                            <a class="nav-link" href="{% url 'access_control:Make_logout' %}">Sign out</a>
                         </li>
                         {% endif %}
                     </ul>
