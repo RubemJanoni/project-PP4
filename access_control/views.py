@@ -21,7 +21,7 @@ class CreateUser(CreateView):
     model = User
     form_class = UserCreationForm
     template_name = 'pages/painel.html'
-    success_url = reverse_lazy('Access_Control:Make_login')
+    success_url = reverse_lazy('access_control:Make_login')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
@@ -38,7 +38,7 @@ class UpdateUser(UpdateView):
     model = User
     form_class = UserCreationForm
     template_name = 'pages/painel.html'
-    success_url = reverse_lazy('Access_Control:List_user')
+    success_url = reverse_lazy('access_control:List_user')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
@@ -53,7 +53,7 @@ class UpdateUser(UpdateView):
 class DeleteUser(DeleteView):
     model = User
     template_name = 'pages/painel.html'
-    success_url = reverse_lazy('Access_Control:List_user')
+    success_url = reverse_lazy('access_control:List_user')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
@@ -67,7 +67,7 @@ class DeleteUser(DeleteView):
 class ListaUser(ListView):
     model = User
     template_name = 'pages/lista.html'
-    success_url = reverse_lazy('Access_Control:Make_login')
+    success_url = reverse_lazy('access_control:Make_login')
 
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
