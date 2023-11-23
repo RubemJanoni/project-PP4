@@ -33,7 +33,7 @@ DEBUG = True
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
-ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-mci60lt0hg.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-rubemjanoni-project-pp4-5qdofrw30x.us2.codeanyapp.com',
                  'coffee-blog-e58e366c1103.herokuapp.com']
 
 
