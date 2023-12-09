@@ -26,7 +26,7 @@ class CreateUser(CreateView):
     # Método que envia informações complementares para o template
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title_page'] = "Register User"
+        context['title_page'] = "Register"
         context['description_page'] = "Use the form below to create new users"
         context['button_name'] = "Create new user"
         context['object_list'] = User.objects.all()
