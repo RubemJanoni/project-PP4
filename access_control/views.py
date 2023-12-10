@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
+from django import forms
+from django.contrib import messages
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
@@ -36,9 +38,28 @@ class Logout (LoginRequiredMixin, LogoutView):
     success_url = reverse_lazy('blog:List_publication')
 
 
+class SimpleUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'password1', 'password2']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Personalize os rótulos dos campos, se necessário
+        self.fields['username'].label = 'Username'
+        self.fields['email'].label = 'Email'
+        self.fields['password1'].label = 'Password'
+        self.fields['password2'].label = 'Password confirmation'
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        # Adicione validações adicionais se necessário
+        return username
+        
+
 class CreateUser(CreateView):
     model = User
-    form_class = UserCreationForm
+    form_class = SimpleUserCreationForm
     template_name = 'painel.html'
     success_url = reverse_lazy('access_control:Make_login')
 
