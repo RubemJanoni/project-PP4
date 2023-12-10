@@ -110,6 +110,15 @@
       </div>
     </nav>
 
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+
+
     <div class="jumbotron mt-5 ml-3">
       {% if user.is_authenticated %}
       <div class="m-auto w-75 p-1 ml-auto mr-auto mt-4 mb-2 shadow shadow-sm">
