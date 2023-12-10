@@ -2,10 +2,13 @@
 
 <div class="container" style="width: 400px">
   <form class="form-signin mt-5" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ form.media}}
     <div class="text-center mb-3">
       <img
         class="mb-4"
-        src="{% static 'images/cafezinho2.6bb6e14a1fe5.png' %}"
+        src="{% static 'images/cafezinho2.png' %}"
         alt=""
         width="72"
         height="72"
