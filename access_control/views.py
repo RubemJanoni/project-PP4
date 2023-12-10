@@ -20,7 +20,7 @@ class Logout (LoginRequiredMixin, LogoutView):
 class CreateUser(CreateView):
     model = User
     form_class = UserCreationForm
-    template_name = 'templates/painel.html'
+    template_name = 'painel.html'
     success_url = reverse_lazy('access_control:Make_login')
 
     # Método que envia informações complementares para o template
@@ -37,7 +37,7 @@ class CreateUser(CreateView):
 class UpdateUser(UpdateView):
     model = User
     form_class = UserCreationForm
-    template_name = 'templates/painel.html'
+    template_name = 'painel.html'
     success_url = reverse_lazy('access_control:List_user')
 
     # Método que envia informações complementares para o template
@@ -52,7 +52,7 @@ class UpdateUser(UpdateView):
 
 class DeleteUser(DeleteView):
     model = User
-    template_name = 'templates/painel.html'
+    template_name = 'painel.html'
     success_url = reverse_lazy('access_control:List_user')
 
     # Método que envia informações complementares para o template
@@ -66,7 +66,7 @@ class DeleteUser(DeleteView):
 
 class ListaUser(ListView):
     model = User
-    template_name = 'templates/lista.html'
+    template_name = 'lista.html'
     success_url = reverse_lazy('access_control:Make_login')
 
     # Método que envia informações complementares para o template
