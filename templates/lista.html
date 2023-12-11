@@ -59,7 +59,7 @@ cursor: pointer !important;
 <div class="m-auto w-75 bg-secondary p-1 ml-auto mr-auto mt-2 mb-2">
     <h2>{{title_page}}</h2>
 </div>
-<div class="alert alert-success" role="alert">
+<div class="alert alert-success" role="alert" id="alert-container">
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -71,13 +71,7 @@ cursor: pointer !important;
 <div class="m-auto w-75 p-1 ml-auto mr-auto mt-2 mb-2">{{description_page}}</div>
 {% endblock page_title_content %}
 {% block container %}
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-        {% endfor %}
-</ul>
-{% endif %}
+
 
 <div class='form-container w-75 shadow shadow-sm p-2 m-auto border '>
     {% if not main == 'Post' %}
@@ -123,6 +117,17 @@ cursor: pointer !important;
     </table>
     {% endif %}
 </div>
+
+<script>
+    // Aguarde 5 segundos e, em seguida, remova a mensagem
+    setTimeout(function () {
+        var alertContainer = document.getElementById('alert-container');
+        if (alertContainer) {
+            alertContainer.innerHTML = '';
+        }
+    }, 5000); // 5000 milissegundos = 5 segundos
+</script>
+
 
 
 {% endblock container %}
