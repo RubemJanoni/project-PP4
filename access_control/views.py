@@ -51,6 +51,11 @@ class SimpleUserCreationForm(UserCreationForm):
         self.fields['password1'].label = 'Password'
         self.fields['password2'].label = 'Password confirmation'
 
+        self.fields['username'].help_text = None
+        self.fields['password2'].help_text = None
+        self.fields['password1'].help_text = None
+        
+
     def clean_username(self):
         username = self.cleaned_data['username']
         # Adicione validações adicionais se necessário
@@ -67,8 +72,8 @@ class CreateUser(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Register"
-        context['description_page'] = "Use the form below to create new users"
-        context['button_name'] = "Create new user"
+        context['description_page'] = "Create an account"
+        context['button_name'] = "Create"
         context['object_list'] = User.objects.all()
 
         return context
