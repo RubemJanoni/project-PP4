@@ -41,7 +41,7 @@ class Logout (LoginRequiredMixin, LogoutView):
 class SimpleUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -55,7 +55,7 @@ class SimpleUserCreationForm(UserCreationForm):
         username = self.cleaned_data['username']
         # Adicione validações adicionais se necessário
         return username
-        
+
 
 class CreateUser(CreateView):
     model = User
