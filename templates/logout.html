@@ -3,10 +3,23 @@
 
 {% block container %}
 
+{% if messages %}
+<div class="alert alert-success" role="alert" id="alert-container">
+    <ul class="messages list-unstyled">
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            <li><strong>{{ message }}</strong></li>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+{% endif messages %}
 
 
-
-
+<div class="container">
+    <p>Do you want to log in again?</p>
+    <a class="nav-link" href="{% url 'access_control:Make_login' %}"><strong>Click Here</strong></a>
+</div>
 
 
 {% endblock container %}
