@@ -3,16 +3,6 @@
 
 {% block container %}
 
-{% if messages %}
-<div class="alert alert-success" role="alert" id="alert-container">
-    <ul class="messages list-unstyled alert-success">
-        {% for message in messages %}
-        <li><strong>{{ message }}</strong></li>
-        {% endfor %}
-    </ul>
-</div>
-{% endif %}
-
 
 <div class="container d-flex justify-content-center align-items-center">
     <p class="align-self-center">Do you want to log in again?<a class="nav-link" href="{% url 'access_control:Make_login' %}"><strong>Click Here</strong></a></p>
