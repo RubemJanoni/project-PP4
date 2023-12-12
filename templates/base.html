@@ -27,6 +27,15 @@
     <style>
     {% block css %}
 
+    #my-alert
+    {
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     
 
     
@@ -161,7 +170,7 @@
     <script>        
         setTimeout(function () {
             document.getElementById('my-alert').style.display = 'none';
-        }, 5000);
+        }, 10000);
     </script>
   </body>
 </html>
