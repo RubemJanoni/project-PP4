@@ -25,16 +25,19 @@
     
 
     <style>
-      {% block css %}
+    {% block css %}
 
-      #alert-container
-      {
+    #alert-container
+    {
         margin-top: 80px;
-        margin: 0 auto
-        max-height: 30px
-      }
+        margin: 0 auto;
+        height: 30px;
+    }
 
-      {% endblock css %}
+
+      
+
+    {% endblock css %}
     </style>
     {% block script_head %} {% endblock script_head %}
   </head>
@@ -113,7 +116,6 @@
     </nav>
 
     {% if messages %}
-
     <div class="container mt-3" id="alert-container">
         <div class="alert alert-success" role="alert">
             <ul class="messages list-unstyled alert-success">
@@ -122,8 +124,7 @@
                 {% endfor %}
             </ul>
         </div>
-    </div>
-    
+    </div>    
     {% endif %}
 
     
