@@ -61,8 +61,10 @@ cursor: pointer !important;
 <div class="m-auto w-75  p-1 ml-auto mr-auto mt-2 mb-5 shadow shadow-sm">
     <h2>{{title_page}} <b class="text-uppercase">{{object}}</b></h2>
 </div>
-<div class="m-auto w-75 p-1 ml-auto mr-auto mt-2 mb-2">{{description_page}}</div>
-<p>Then please sign in instead.<a class="nav-link" href="{% url 'access_control:Make_login' %}"><strong>Sign in</strong></a></p>
+<div class="m-auto w-75 p-1 ml-auto mr-auto mt-2 mb-2">{{description_page}}
+    <p>Then please sign in instead.<a class="nav-link" href="{% url 'access_control:Make_login' %}"><strong>Sign in</strong></a></p>
+</div>
+
 {% endblock page_title_content %}
 {% block container %}
 
