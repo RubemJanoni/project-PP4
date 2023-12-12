@@ -79,8 +79,8 @@ cursor: pointer !important;
             {% for n in object_list %}
             <tr>
                 <td>{{n.username}}</td>
-                <td><a href="{% url 'Access_Control:Update_user' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a>
-                    | <a class='btn btn-sm btn-danger m1-1' href="{% url 'Access_Control:Delete_user' n.id %}">
+                <td><a href="{% url 'access_control:Update_user' n.pk %}" class='btn btn-sm btn-info mr-1'> Atualiza</a>
+                    | <a class='btn btn-sm btn-danger m1-1' href="{% url 'access_control:Delete_user' n.id %}">
                         Delete</a></td>
             </tr>
             {% endfor %}
@@ -110,15 +110,7 @@ cursor: pointer !important;
     {% endif %}
 </div>
 
-<script>
-    // Aguarde 5 segundos e, em seguida, remova a mensagem
-    setTimeout(function () {
-        var alertContainer = document.getElementById('alert-container');
-        if (alertContainer) {
-            alertContainer.innerHTML = '';
-        }
-    }, 5000); // 5000 milissegundos = 5 segundos
-</script>
+
 
 
 

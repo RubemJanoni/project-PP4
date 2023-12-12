@@ -11,8 +11,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 class Make_login (LoginView):
-    template_name = 'login.html'
-    
+    template_name = 'login.html'    
 
     def get_success_url(self):
         return reverse_lazy('blog:List_publication')
@@ -34,8 +33,13 @@ class Make_login (LoginView):
         return super().get(request, *args, **kwargs)
 
 
-class Logout (LoginRequiredMixin, LogoutView):
-    success_url = reverse_lazy('blog:Home')
+class CustomLogoutView (LoginRequiredMixin, LogoutView):
+    template_name = 'logout.html' 
+
+    def get(self, request, *args, **kwargs):
+        messages.success(request, 'Logout successfully')
+
+        return render(request, self.template_name)
 
 
 class SimpleUserCreationForm(UserCreationForm):
