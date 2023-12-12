@@ -28,17 +28,17 @@ class Make_login (LoginView):
 
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
-            # Redirecionar usuário autenticado para a página desejada
+                      
             return redirect(self.get_success_url())
         return super().get(request, *args, **kwargs)
 
 
 class CustomLogoutView (LoginRequiredMixin, LogoutView):
-    template_name = 'logout.html' 
+
+    template_name = 'logout.html'
 
     def get(self, request, *args, **kwargs):
         messages.success(request, 'Logout successfully')
-
         return render(request, self.template_name)
 
 
@@ -57,8 +57,7 @@ class SimpleUserCreationForm(UserCreationForm):
 
         self.fields['username'].help_text = None
         self.fields['password2'].help_text = None
-        self.fields['password1'].help_text = None
-        
+        self.fields['password1'].help_text = None        
 
     def clean_username(self):
         username = self.cleaned_data['username']
