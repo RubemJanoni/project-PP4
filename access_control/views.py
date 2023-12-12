@@ -52,7 +52,7 @@ class SimpleUserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Personalize os rótulos dos campos, se necessário
+        
         self.fields['username'].label = 'Username'
         self.fields['email'].label = 'Email'
         self.fields['password1'].label = 'Password'
@@ -64,7 +64,7 @@ class SimpleUserCreationForm(UserCreationForm):
 
     def clean_username(self):
         username = self.cleaned_data['username']
-        # Adicione validações adicionais se necessário
+        
         return username
 
 
@@ -74,7 +74,7 @@ class CreateUser(CreateView):
     template_name = 'painel.html'
     success_url = reverse_lazy('access_control:Make_login')
 
-    # Método que envia informações complementares para o template
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Register"
@@ -91,7 +91,7 @@ class UpdateUser(UpdateView):
     template_name = 'painel.html'
     success_url = reverse_lazy('access_control:List_user')
 
-    # Método que envia informações complementares para o template
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Update User"
@@ -106,7 +106,7 @@ class DeleteUser(DeleteView):
     template_name = 'painel.html'
     success_url = reverse_lazy('access_control:List_user')
 
-    # Método que envia informações complementares para o template
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Delete User"
@@ -120,7 +120,7 @@ class ListaUser(ListView):
     template_name = 'lista.html'
     success_url = reverse_lazy('access_control:Make_login')
 
-    # Método que envia informações complementares para o template
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Users"
