@@ -38,7 +38,9 @@ class CustomLogoutView (LoginRequiredMixin, LogoutView):
     template_name = 'logout.html'
 
     def get(self, request, *args, **kwargs):
-        messages.success(request, 'Logout successfully')
+        messages.add_message(request, messages.SUCCESS, 'Logout successfully.')
+
+        logout(request)
         return render(request, self.template_name)
 
 
