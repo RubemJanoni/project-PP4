@@ -138,17 +138,18 @@
       {% endif %} 
       
       {% block page_title_content %} {% endblock page_title_content%}
-      {% block container %} 
+      {% block container %}
 
-    {% if messages %}
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {% if messages %}
+      
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
         <ul class="messages list-unstyled alert-success">
             {% for message in messages %}
             <li><strong>{{ message }}</strong></li>
             {% endfor %}
         </ul>
-    </div>
-    {% endif %}
+      </div>
+      {% endif %}
 
 
 
