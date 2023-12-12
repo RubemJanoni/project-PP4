@@ -133,7 +133,12 @@
           class="btn btn-sm"
           >Create a Post</a
         >
-      </div>
+      </div>    
+      
+      {% endif %} 
+      
+      {% block page_title_content %} {% endblock page_title_content%}
+      {% block container %} 
 
     {% if messages %}
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -142,15 +147,11 @@
             <li><strong>{{ message }}</strong></li>
             {% endfor %}
         </ul>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
     </div>
-    
     {% endif %}
-      
-      {% endif %} {% block page_title_content %} {% endblock page_title_content%}
-      {% block container %} 
+
+
+
       {% endblock container %}
     </div>
   </body>

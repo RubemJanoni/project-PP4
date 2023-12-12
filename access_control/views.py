@@ -40,7 +40,6 @@ class CustomLogoutView (LoginRequiredMixin, LogoutView):
 
     def get(self, request, *args, **kwargs):
         messages.success(request, 'Logout successfully.')
-
         logout(request)
         return super().get(request, *args, **kwargs)
 
