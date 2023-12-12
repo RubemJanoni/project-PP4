@@ -27,6 +27,11 @@
     <style>
       {% block css %}
 
+      #alert-container
+      {
+        margin-top: 30px;
+      }
+
       {% endblock css %}
     </style>
     {% block script_head %} {% endblock script_head %}
@@ -106,13 +111,17 @@
     </nav>
 
     {% if messages %}
-    <div class="alert alert-success" role="alert" id="alert-container">
-        <ul class="messages list-unstyled alert-success">
-            {% for message in messages %}
-            <li><strong>{{ message }}</strong></li>
-            {% endfor %}
-        </ul>
+
+    <div class="container mt-3" id="alert-container">
+        <div class="alert alert-success" role="alert">
+            <ul class="messages list-unstyled alert-success">
+                {% for message in messages %}
+                <li><strong>{{ message }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+    
     {% endif %}
 
     

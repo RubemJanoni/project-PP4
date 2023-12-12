@@ -78,7 +78,7 @@ class CreateUser(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title_page'] = "Register"
-        context['description_page'] = "Create an account"
+        context['description_page'] = "Do you already have an account? Then please sign in instead"
         context['button_name'] = "Create"
         context['object_list'] = User.objects.all()
 
