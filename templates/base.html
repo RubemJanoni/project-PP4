@@ -29,11 +29,8 @@
 
     #alert-container
     {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
+        margin: 0 auto;
+        height: 30px;
     }
 
     
@@ -116,19 +113,7 @@
       </div>
     </nav>
 
-    {% if messages %}
-    <div class="container mt-3" id="alert-container">
-        <div class="alert alert-success" role="alert">
-            <ul class="messages list-unstyled alert-success">
-                {% for message in messages %}
-                <li><strong>{{ message }}</strong></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>    
-    {% endif %}
-
-    
+       
 
 
     <div class="jumbotron mt-5 ml-3">
@@ -153,9 +138,19 @@
           >Create a Post</a
         >
       </div>
-      <div>
-        <p>TESTANDO</p>
-      </div>
+
+    {% if messages %}
+    <div class="container mt-3" id="alert-container">
+        <div class="alert alert-success" role="alert">
+            <ul class="messages list-unstyled alert-success">
+                {% for message in messages %}
+                <li><strong>{{ message }}</strong></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+      
       {% endif %} {% block page_title_content %} {% endblock page_title_content%}
       {% block container %} 
       {% endblock container %}
