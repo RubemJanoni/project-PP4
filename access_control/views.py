@@ -41,7 +41,7 @@ class CustomLogoutView (LoginRequiredMixin, LogoutView):
         messages.add_message(request, messages.SUCCESS, 'Logout successfully.')
 
         logout(request)
-        return render(request, self.template_name)
+        return super().get(request, *args, **kwargs)
 
 
 class SimpleUserCreationForm(UserCreationForm):
