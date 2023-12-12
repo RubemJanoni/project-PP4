@@ -139,7 +139,7 @@
 
     {% if messages %}
     
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert" id="my-alert">
         <ul class="messages list-unstyled alert-success">
             {% for message in messages %}
             <li><strong>{{ message }}</strong></li>
@@ -157,5 +157,11 @@
 
       {% endblock container %}
     </div>
+
+    <script>        
+        setTimeout(function () {
+            document.getElementById('my-alert').style.display = 'none';
+        }, 5000);
+    </script>
   </body>
 </html>
