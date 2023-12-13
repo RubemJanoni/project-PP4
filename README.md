@@ -3,13 +3,20 @@
 Coffee blog is a website aimed at coffee lovers, a place where they can share information about the world of coffee.
 Users can create posts containing title, author, content and image, they can also update and delete their posts.
 
-The live link can be found here - [Coffee Blog](https://mytodolist-b19dd36961bb.herokuapp.com/)
+The live link can be found here - [Coffee Blog](https://coffee-blog-e58e366c1103.herokuapp.com/)
 
 ![responsive-site](static/responsive-coffeeblog.jpg)
 
-## Planning
+## UX
 
-The project planning was done using the Agile methodology.
+Following an Agile paradigm, user stories will target customer needs and reduce embellishments on the part of the developer.
+Site user needs can be split into 3 categories or epics:
+
+- Navigation
+- Account management
+- Post management
+
+
 
 ![agile-site](static/agile-coffeeblog.jpg)
 
