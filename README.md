@@ -7,7 +7,9 @@ The live link can be found here - [Coffee Blog](https://coffee-blog-e58e366c1103
 
 ![responsive-site](static/responsive-coffeeblog.jpg)
 
+
 ## UX
+
 
 Following an Agile paradigm, user stories will target customer needs and reduce embellishments on the part of the developer.
 Site user needs can be split into 3 categories or epics:
@@ -23,13 +25,15 @@ Site user needs can be split into 3 categories or epics:
 
 
 
+
 ## Design
 
 The design was planned to offer a clean, minimalist layout, with a white background and black navigation bar, highlighting the colors of the coffee images, the different shades of brown, harmoniously interacting with black and white.
 As inspiration for the design and the choice of the color palette, we used the **Huemint** tool, where we could test various combinations and palette options.
 
 
-![design](static/agile-coffee-blog-pallete.jpg)
+![design](static/images/coffee-blog-pallete.jpg)
+
 
 
 
