@@ -5,6 +5,7 @@ Users can create posts containing title, author, content and image, they can als
 
 The live link can be found here - [Coffee Blog](https://coffee-blog-e58e366c1103.herokuapp.com/)
 
+
 ![responsive-site](static/responsive-coffeeblog.jpg)
 
 
@@ -30,6 +31,7 @@ Site user needs can be split into 3 categories or epics:
 
 The design was planned to offer a clean, minimalist layout, with a white background and black navigation bar, highlighting the colors of the coffee images, the different shades of brown, harmoniously interacting with black and white.
 As inspiration for the design and the choice of the color palette, we used the **Huemint** tool, where we could test various combinations and palette options.
+
 
 
 ![design](static/images/coffee-blog-pallete.jpg)
