@@ -9,6 +9,5 @@ class Publication_form(forms.ModelForm):
         # fields = '__all__'
         fields = ['title', 'author', 'featured_image', 'content', 'status']
 
-    featured_image = forms.ImageField(label='Upload Image')
-
+    
 
