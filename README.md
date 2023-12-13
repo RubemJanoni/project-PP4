@@ -15,6 +15,7 @@ Site user needs can be split into 3 categories or epics:
 - Navigation
 - Account management
 - Post management
+  
 
 
 
@@ -22,11 +23,18 @@ Site user needs can be split into 3 categories or epics:
 
 
 
-## Features
-
-- Design
+## Design
 
 The design was planned to offer a clean, minimalist layout, with a white background and black navigation bar, highlighting the colors of the coffee images, the different shades of brown, harmoniously interacting with black and white.
+As inspiration for the design and the choice of the color palette, we used the **Huemint** tool, where we could test various combinations and palette options.
+
+
+![design](static/agile-coffee-blog-pallete.jpg)
+
+
+
+## Features
+
 
 - Navigation
 
