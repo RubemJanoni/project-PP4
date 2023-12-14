@@ -85,8 +85,18 @@ The **All post** and **Create Post** buttons take the user to the list of posts 
   The user will only be able to create, change and delete a post after registering and logging in.
 
 
-
 ![menu-site](static/images/coffee-blog-menu.jpg)
+
+
+## Favicon
+
+We utilized a favicon created from an image of a coffee cup, generated through the Favicon generator tool. The same image was used as an icon on the login page, ensuring a consistent design throughout.
+
+![design](static/images/coffee-blog-favicon.jpg)
+
+![design](static/images/coffee-blog-login.jpg)
+
+
 
 
 ## The Header
