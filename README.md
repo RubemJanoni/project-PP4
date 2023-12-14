@@ -44,7 +44,19 @@ As inspiration for the design and the choice of the color palette, we used the *
 
 - Navigation
 
-Navigation is quite simple, basically we have a menu on the left with the main features, containing three buttons (Home, All Posts, Create Post)
+Navigation is quite simple, basically we have a menu on the left with the main features, containing three buttons (Register, Sign In, Sign Out, Home, All Posts, Create Post).
+
+**Register** - Leads the user to the registration form, containing four input fields (Username, Email, Password, and Password confirmation). Upon completing the registration, the user is directed to the login page.
+
+![design](static/images/coffee-blog-register.jpg)
+
+
+
+**Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 5 seconds through the use of the JavaScript **setTimeout** function.
+
+![design](static/images/coffee-blog-login.jpg)
+
+**Sign Out** - Redirects the user to the logout page, displaying a Bootstrap alert confirming the logout. It also provides the user with the option to log in again.
 
 **Home** - It always takes you to the home page, where the posts are displayed.
 
