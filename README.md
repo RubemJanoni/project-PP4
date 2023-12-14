@@ -60,6 +60,8 @@ Also provides the user with the option to log in immediately if they already hav
 
 **Sign Out** - Redirects the user to the logout page, displaying a Bootstrap alert confirming the logout. It also provides the user with the option to log in again.
 
+![design](static/images/coffee-blog-logout.jpg)
+
 **Home** - It always takes you to the home page, where the posts are displayed.
 
 **All Posts** - Displays a list of posts, where it is possible to update or delete each post.
