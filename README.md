@@ -50,7 +50,7 @@ Also provides the user with the option to log in immediately if they already hav
 ![design](static/images/coffee-blog-register.jpg)
 
 
-**Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 7 seconds through the use of the JavaScript **setTimeout** function.
+**Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 10 seconds through the use of the JavaScript **setTimeout** function.
 
 - Post Registration / logging in
 
@@ -140,8 +140,12 @@ Following the same design pattern, the footer is presented, containing links to 
 - ACCESSIBILITY
   - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
 
-  ![validation-site](static/lighthouse-coffeeblog.jpg)         
-         
+  ![validation-site](static/lighthouse-coffeeblog.jpg)
+
+
+## Bugs
+
+After deployment, the images were not rendering. The issue was resolved by creating a new Elephant PostgreSQL instance and a new storage on Cloudinary.       
     
 
 
@@ -182,7 +186,46 @@ Go to the Deploy tab.
 Connect to GitHub, sign in and connect to the required repository.
 
 Scroll down to manual Deploy, select the main branch, and click deploy.
-  
+
+
+## Technologies Used
+
+### Main Languages Used
+
+- HMTL5
+- CSS3
+- Python
+- Javascript
+
+## Frameworks, Libraries & Programs Used
+
+
+- Huemint to research colour schemas.
+- GitHub for repo storage and Agile project management using Kanban boards/issue tracking.
+- Heroku for project deployment to the world wide web.
+- Python3 with the following modules
+  - asgiref==3.7.2
+  - cloudinary==1.34.0
+  - dj-database-url==0.5.0
+  - dj3-cloudinary-storage==0.0.6
+  - Django==3.2.20
+  - django-ckeditor==6.7.0
+  - django-js-asset==2.1.0
+  - django-summernote==0.8.20.0
+  - gunicorn==21.2.0
+  - psycopg2==2.9.7
+  - pytz==2023.3
+  - sqlparse==0.4.4
+  - urllib3==1.26.16
+- Bootstrap
+- Django
+- Django Templating
+- PostgreSQL
+- Allauth
+- Chrome DevTools
+- W3C Markup Validator HTML linter
+- Jigsaw CSS linter
+- JSHint JS linter  
   
 
 ## Credits
