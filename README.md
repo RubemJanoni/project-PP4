@@ -86,7 +86,7 @@ The **All post** and **Create Post** buttons take the user to the list of posts 
 
 
 
-![menu-site](static/menu2-coffeeblog.jpg)
+![menu-site](static/coffee-blog-menu.jpg)
 
 
 ## The Header
