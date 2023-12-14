@@ -50,12 +50,15 @@ Also provides the user with the option to log in immediately if they already hav
 ![design](static/images/coffee-blog-register.jpg)
 
 
-
 **Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 7 seconds through the use of the JavaScript **setTimeout** function.
+
+- Post Registration / logging in
 
 ![design](static/images/coffee-blog-login02.jpg)
 
 **Sign Out** - Redirects the user to the logout page, displaying a Bootstrap alert confirming the logout. It also provides the user with the option to log in again.
+
+- logging out
 
 ![design](static/images/coffee-blog-logout.jpg)
 
