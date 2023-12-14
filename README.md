@@ -33,10 +33,7 @@ The design was planned to offer a clean, minimalist layout, with a white backgro
 As inspiration for the design and the choice of the color palette, we used the **Huemint** tool, where we could test various combinations and palette options.
 
 
-
 ![design](static/images/coffee-blog-pallete.jpg)
-
-
 
 
 ## Features
@@ -54,7 +51,7 @@ Also provides the user with the option to log in immediately if they already hav
 
 
 
-**Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 5 seconds through the use of the JavaScript **setTimeout** function.
+**Sign In** - Takes the user to the login page, requiring the completion of only two input fields (Username and Password). After logging in, a Bootstrap alert confirming the successful login is displayed. The alert automatically disappears after 7 seconds through the use of the JavaScript **setTimeout** function.
 
 ![design](static/images/coffee-blog-login02.jpg)
 
@@ -169,9 +166,9 @@ The following vars must be defined...
 
 DATABASE_URL should have been populated by heroku
 
-EMAIL_HOST_USER - is the sendng email address for user email verification (from signup).
+EMAIL_HOST_USER - is the sending email address for user email verification (from signup).
 
-EMAIL_HOST_PASS - is the sendng email address password for user email verification (from signup).
+EMAIL_HOST_PASS - is the sending email address password for user email verification (from signup).
 
 HEROKU_HOSTNAME - is the url which the app is deleivered by.
 
@@ -184,7 +181,6 @@ Connect to GitHub, sign in and connect to the required repository.
 Scroll down to manual Deploy, select the main branch, and click deploy.
   
   
-The live link can be found here - [Coffee Blog](https://mytodolist-b19dd36961bb.herokuapp.com/)
 
 ## Credits
 
